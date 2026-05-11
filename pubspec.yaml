@@ -1,0 +1,61 @@
+name: agroplan
+description: AI-powered crop planning assistant for regenerative agriculture.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management + dependency injection (like Hilt + ViewModel)
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Navigation (like Android Navigation Component)
+  go_router: ^14.2.0
+
+  # Immutable models with copyWith + pattern matching (like Kotlin data class)
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Backend: auth, database, realtime, storage
+  supabase_flutter: ^2.5.6
+
+  # Local SQLite offline cache (like Room)
+  drift: ^2.18.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.3
+  path: ^1.9.0
+
+  # Lightweight key-value store for flags (onboarding seen, theme pref)
+  shared_preferences: ^2.3.1
+
+  # Images from CDN
+  cached_network_image: ^3.3.1
+
+  # SVG icons
+  flutter_svg: ^2.0.10+1
+
+  # Fonts: Instrument Serif (headings) + JetBrains Mono (labels)
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code generation
+  build_runner: ^2.4.11
+  freezed: ^2.5.2             # Generates copyWith, ==, toString, pattern match
+  json_serializable: ^6.8.0   # Generates fromJson / toJson
+  riverpod_generator: ^2.4.3  # Generates @riverpod provider boilerplate
+  drift_dev: ^2.18.0          # Generates DB table classes + query extensions
+
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  # Note: InstrumentSerif and JetBrains Mono are loaded via google_fonts package at runtime.
+  # No local font asset files needed.

@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+
+extension ColorX on Color {
+  Color withTint(double opacity) => withOpacity(opacity);
+}
+
+extension IterableX<T> on Iterable<T> {
+  T? firstOrNull(bool Function(T) test) {
+    for (final e in this) {
+      if (test(e)) return e;
+    }
+    return null;
+  }
+}
