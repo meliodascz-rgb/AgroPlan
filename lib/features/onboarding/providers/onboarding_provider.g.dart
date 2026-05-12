@@ -6,22 +6,50 @@ part of 'onboarding_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(OnboardingNotifier)
+final onboardingProvider = OnboardingNotifierProvider._();
+
+final class OnboardingNotifierProvider
+    extends $AsyncNotifierProvider<OnboardingNotifier, bool> {
+  OnboardingNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'onboardingProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$onboardingNotifierHash();
+
+  @$internal
+  @override
+  OnboardingNotifier create() => OnboardingNotifier();
+}
+
 String _$onboardingNotifierHash() =>
     r'3a2614d8facc817e063c654f5417645280e14d15';
 
-/// See also [OnboardingNotifier].
-@ProviderFor(OnboardingNotifier)
-final onboardingNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<OnboardingNotifier, bool>.internal(
-  OnboardingNotifier.new,
-  name: r'onboardingNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$onboardingNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$OnboardingNotifier = AutoDisposeAsyncNotifier<bool>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+abstract class _$OnboardingNotifier extends $AsyncNotifier<bool> {
+  FutureOr<bool> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<bool>, bool>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<bool>, bool>,
+              AsyncValue<bool>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

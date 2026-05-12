@@ -6,171 +6,102 @@ part of 'editor_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$editorNotifierHash() => r'23d0c34a701082580e92e8b451eb018046e39c41';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-abstract class _$EditorNotifier
-    extends BuildlessAutoDisposeNotifier<EditorState> {
-  late final String fieldId;
-
-  EditorState build(
-    String fieldId,
-  );
-}
-
-/// See also [EditorNotifier].
 @ProviderFor(EditorNotifier)
-const editorNotifierProvider = EditorNotifierFamily();
+final editorProvider = EditorNotifierFamily._();
 
-/// See also [EditorNotifier].
-class EditorNotifierFamily extends Family<EditorState> {
-  /// See also [EditorNotifier].
-  const EditorNotifierFamily();
+final class EditorNotifierProvider
+    extends $NotifierProvider<EditorNotifier, EditorState> {
+  EditorNotifierProvider._({
+    required EditorNotifierFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'editorProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
-  /// See also [EditorNotifier].
-  EditorNotifierProvider call(
-    String fieldId,
-  ) {
-    return EditorNotifierProvider(
-      fieldId,
-    );
+  @override
+  String debugGetCreateSourceHash() => _$editorNotifierHash();
+
+  @override
+  String toString() {
+    return r'editorProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  EditorNotifierProvider getProviderOverride(
-    covariant EditorNotifierProvider provider,
-  ) {
-    return call(
-      provider.fieldId,
-    );
-  }
+  EditorNotifier create() => EditorNotifier();
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'editorNotifierProvider';
-}
-
-/// See also [EditorNotifier].
-class EditorNotifierProvider
-    extends AutoDisposeNotifierProviderImpl<EditorNotifier, EditorState> {
-  /// See also [EditorNotifier].
-  EditorNotifierProvider(
-    String fieldId,
-  ) : this._internal(
-          () => EditorNotifier()..fieldId = fieldId,
-          from: editorNotifierProvider,
-          name: r'editorNotifierProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$editorNotifierHash,
-          dependencies: EditorNotifierFamily._dependencies,
-          allTransitiveDependencies:
-              EditorNotifierFamily._allTransitiveDependencies,
-          fieldId: fieldId,
-        );
-
-  EditorNotifierProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.fieldId,
-  }) : super.internal();
-
-  final String fieldId;
-
-  @override
-  EditorState runNotifierBuild(
-    covariant EditorNotifier notifier,
-  ) {
-    return notifier.build(
-      fieldId,
-    );
-  }
-
-  @override
-  Override overrideWith(EditorNotifier Function() create) {
-    return ProviderOverride(
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(EditorState value) {
+    return $ProviderOverride(
       origin: this,
-      override: EditorNotifierProvider._internal(
-        () => create()..fieldId = fieldId,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        fieldId: fieldId,
-      ),
+      providerOverride: $SyncValueProvider<EditorState>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<EditorNotifier, EditorState>
-      createElement() {
-    return _EditorNotifierProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is EditorNotifierProvider && other.fieldId == fieldId;
+    return other is EditorNotifierProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, fieldId.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin EditorNotifierRef on AutoDisposeNotifierProviderRef<EditorState> {
-  /// The parameter `fieldId` of this provider.
-  String get fieldId;
-}
+String _$editorNotifierHash() => r'23d0c34a701082580e92e8b451eb018046e39c41';
 
-class _EditorNotifierProviderElement
-    extends AutoDisposeNotifierProviderElement<EditorNotifier, EditorState>
-    with EditorNotifierRef {
-  _EditorNotifierProviderElement(super.provider);
+final class EditorNotifierFamily extends $Family
+    with
+        $ClassFamilyOverride<
+          EditorNotifier,
+          EditorState,
+          EditorState,
+          EditorState,
+          String
+        > {
+  EditorNotifierFamily._()
+    : super(
+        retry: null,
+        name: r'editorProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
+
+  EditorNotifierProvider call(String fieldId) =>
+      EditorNotifierProvider._(argument: fieldId, from: this);
 
   @override
-  String get fieldId => (origin as EditorNotifierProvider).fieldId;
+  String toString() => r'editorProvider';
 }
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+
+abstract class _$EditorNotifier extends $Notifier<EditorState> {
+  late final _$args = ref.$arg as String;
+  String get fieldId => _$args;
+
+  EditorState build(String fieldId);
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<EditorState, EditorState>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<EditorState, EditorState>,
+              EditorState,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, () => build(_$args));
+  }
+}

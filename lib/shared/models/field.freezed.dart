@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,289 +9,296 @@ part of 'field.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-Field _$FieldFromJson(Map<String, dynamic> json) {
-  return _Field.fromJson(json);
-}
 
 /// @nodoc
 mixin _$Field {
-  String get id => throw _privateConstructorUsedError;
-  String get userId => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  int get cols => throw _privateConstructorUsedError;
-  int get rows => throw _privateConstructorUsedError;
-  int get cellSizeCm =>
-      throw _privateConstructorUsedError; // 20 / 30 / 50 / 100
-  List<int> get shapeMask => throw _privateConstructorUsedError;
+
+ String get id; String get userId; String get name; int get cols; int get rows; int get cellSizeCm;// 20 / 30 / 50 / 100
+ List<int> get shapeMask;
+/// Create a copy of Field
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$FieldCopyWith<Field> get copyWith => _$FieldCopyWithImpl<Field>(this as Field, _$identity);
 
   /// Serializes this Field to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Field
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $FieldCopyWith<Field> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Field&&(identical(other.id, id) || other.id == id)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.name, name) || other.name == name)&&(identical(other.cols, cols) || other.cols == cols)&&(identical(other.rows, rows) || other.rows == rows)&&(identical(other.cellSizeCm, cellSizeCm) || other.cellSizeCm == cellSizeCm)&&const DeepCollectionEquality().equals(other.shapeMask, shapeMask));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,userId,name,cols,rows,cellSizeCm,const DeepCollectionEquality().hash(shapeMask));
+
+@override
+String toString() {
+  return 'Field(id: $id, userId: $userId, name: $name, cols: $cols, rows: $rows, cellSizeCm: $cellSizeCm, shapeMask: $shapeMask)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $FieldCopyWith<$Res> {
-  factory $FieldCopyWith(Field value, $Res Function(Field) then) =
-      _$FieldCopyWithImpl<$Res, Field>;
-  @useResult
-  $Res call(
-      {String id,
-      String userId,
-      String name,
-      int cols,
-      int rows,
-      int cellSizeCm,
-      List<int> shapeMask});
-}
+abstract mixin class $FieldCopyWith<$Res>  {
+  factory $FieldCopyWith(Field value, $Res Function(Field) _then) = _$FieldCopyWithImpl;
+@useResult
+$Res call({
+ String id, String userId, String name, int cols, int rows, int cellSizeCm, List<int> shapeMask
+});
 
+
+
+
+}
 /// @nodoc
-class _$FieldCopyWithImpl<$Res, $Val extends Field>
+class _$FieldCopyWithImpl<$Res>
     implements $FieldCopyWith<$Res> {
-  _$FieldCopyWithImpl(this._value, this._then);
+  _$FieldCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Field _self;
+  final $Res Function(Field) _then;
 
-  /// Create a copy of Field
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? userId = null,
-    Object? name = null,
-    Object? cols = null,
-    Object? rows = null,
-    Object? cellSizeCm = null,
-    Object? shapeMask = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      cols: null == cols
-          ? _value.cols
-          : cols // ignore: cast_nullable_to_non_nullable
-              as int,
-      rows: null == rows
-          ? _value.rows
-          : rows // ignore: cast_nullable_to_non_nullable
-              as int,
-      cellSizeCm: null == cellSizeCm
-          ? _value.cellSizeCm
-          : cellSizeCm // ignore: cast_nullable_to_non_nullable
-              as int,
-      shapeMask: null == shapeMask
-          ? _value.shapeMask
-          : shapeMask // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-    ) as $Val);
-  }
+/// Create a copy of Field
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? userId = null,Object? name = null,Object? cols = null,Object? rows = null,Object? cellSizeCm = null,Object? shapeMask = null,}) {
+  return _then(_self.copyWith(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,cols: null == cols ? _self.cols : cols // ignore: cast_nullable_to_non_nullable
+as int,rows: null == rows ? _self.rows : rows // ignore: cast_nullable_to_non_nullable
+as int,cellSizeCm: null == cellSizeCm ? _self.cellSizeCm : cellSizeCm // ignore: cast_nullable_to_non_nullable
+as int,shapeMask: null == shapeMask ? _self.shapeMask : shapeMask // ignore: cast_nullable_to_non_nullable
+as List<int>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$FieldImplCopyWith<$Res> implements $FieldCopyWith<$Res> {
-  factory _$$FieldImplCopyWith(
-          _$FieldImpl value, $Res Function(_$FieldImpl) then) =
-      __$$FieldImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String userId,
-      String name,
-      int cols,
-      int rows,
-      int cellSizeCm,
-      List<int> shapeMask});
 }
 
-/// @nodoc
-class __$$FieldImplCopyWithImpl<$Res>
-    extends _$FieldCopyWithImpl<$Res, _$FieldImpl>
-    implements _$$FieldImplCopyWith<$Res> {
-  __$$FieldImplCopyWithImpl(
-      _$FieldImpl _value, $Res Function(_$FieldImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Field
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? userId = null,
-    Object? name = null,
-    Object? cols = null,
-    Object? rows = null,
-    Object? cellSizeCm = null,
-    Object? shapeMask = null,
-  }) {
-    return _then(_$FieldImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      userId: null == userId
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      cols: null == cols
-          ? _value.cols
-          : cols // ignore: cast_nullable_to_non_nullable
-              as int,
-      rows: null == rows
-          ? _value.rows
-          : rows // ignore: cast_nullable_to_non_nullable
-              as int,
-      cellSizeCm: null == cellSizeCm
-          ? _value.cellSizeCm
-          : cellSizeCm // ignore: cast_nullable_to_non_nullable
-              as int,
-      shapeMask: null == shapeMask
-          ? _value._shapeMask
-          : shapeMask // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [Field].
+extension FieldPatterns on Field {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Field value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Field() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Field value)  $default,){
+final _that = this;
+switch (_that) {
+case _Field():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Field value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Field() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String userId,  String name,  int cols,  int rows,  int cellSizeCm,  List<int> shapeMask)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Field() when $default != null:
+return $default(_that.id,_that.userId,_that.name,_that.cols,_that.rows,_that.cellSizeCm,_that.shapeMask);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String userId,  String name,  int cols,  int rows,  int cellSizeCm,  List<int> shapeMask)  $default,) {final _that = this;
+switch (_that) {
+case _Field():
+return $default(_that.id,_that.userId,_that.name,_that.cols,_that.rows,_that.cellSizeCm,_that.shapeMask);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String userId,  String name,  int cols,  int rows,  int cellSizeCm,  List<int> shapeMask)?  $default,) {final _that = this;
+switch (_that) {
+case _Field() when $default != null:
+return $default(_that.id,_that.userId,_that.name,_that.cols,_that.rows,_that.cellSizeCm,_that.shapeMask);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$FieldImpl implements _Field {
-  const _$FieldImpl(
-      {required this.id,
-      required this.userId,
-      required this.name,
-      required this.cols,
-      required this.rows,
-      required this.cellSizeCm,
-      final List<int> shapeMask = const []})
-      : _shapeMask = shapeMask;
 
-  factory _$FieldImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FieldImplFromJson(json);
+class _Field implements Field {
+  const _Field({required this.id, required this.userId, required this.name, required this.cols, required this.rows, required this.cellSizeCm, final  List<int> shapeMask = const []}): _shapeMask = shapeMask;
+  factory _Field.fromJson(Map<String, dynamic> json) => _$FieldFromJson(json);
 
-  @override
-  final String id;
-  @override
-  final String userId;
-  @override
-  final String name;
-  @override
-  final int cols;
-  @override
-  final int rows;
-  @override
-  final int cellSizeCm;
+@override final  String id;
+@override final  String userId;
+@override final  String name;
+@override final  int cols;
+@override final  int rows;
+@override final  int cellSizeCm;
 // 20 / 30 / 50 / 100
-  final List<int> _shapeMask;
+ final  List<int> _shapeMask;
 // 20 / 30 / 50 / 100
-  @override
-  @JsonKey()
-  List<int> get shapeMask {
-    if (_shapeMask is EqualUnmodifiableListView) return _shapeMask;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_shapeMask);
-  }
-
-  @override
-  String toString() {
-    return 'Field(id: $id, userId: $userId, name: $name, cols: $cols, rows: $rows, cellSizeCm: $cellSizeCm, shapeMask: $shapeMask)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FieldImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.userId, userId) || other.userId == userId) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.cols, cols) || other.cols == cols) &&
-            (identical(other.rows, rows) || other.rows == rows) &&
-            (identical(other.cellSizeCm, cellSizeCm) ||
-                other.cellSizeCm == cellSizeCm) &&
-            const DeepCollectionEquality()
-                .equals(other._shapeMask, _shapeMask));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, userId, name, cols, rows,
-      cellSizeCm, const DeepCollectionEquality().hash(_shapeMask));
-
-  /// Create a copy of Field
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FieldImplCopyWith<_$FieldImpl> get copyWith =>
-      __$$FieldImplCopyWithImpl<_$FieldImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FieldImplToJson(
-      this,
-    );
-  }
+@override@JsonKey() List<int> get shapeMask {
+  if (_shapeMask is EqualUnmodifiableListView) return _shapeMask;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_shapeMask);
 }
 
-abstract class _Field implements Field {
-  const factory _Field(
-      {required final String id,
-      required final String userId,
-      required final String name,
-      required final int cols,
-      required final int rows,
-      required final int cellSizeCm,
-      final List<int> shapeMask}) = _$FieldImpl;
 
-  factory _Field.fromJson(Map<String, dynamic> json) = _$FieldImpl.fromJson;
+/// Create a copy of Field
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$FieldCopyWith<_Field> get copyWith => __$FieldCopyWithImpl<_Field>(this, _$identity);
 
-  @override
-  String get id;
-  @override
-  String get userId;
-  @override
-  String get name;
-  @override
-  int get cols;
-  @override
-  int get rows;
-  @override
-  int get cellSizeCm; // 20 / 30 / 50 / 100
-  @override
-  List<int> get shapeMask;
-
-  /// Create a copy of Field
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FieldImplCopyWith<_$FieldImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$FieldToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Field&&(identical(other.id, id) || other.id == id)&&(identical(other.userId, userId) || other.userId == userId)&&(identical(other.name, name) || other.name == name)&&(identical(other.cols, cols) || other.cols == cols)&&(identical(other.rows, rows) || other.rows == rows)&&(identical(other.cellSizeCm, cellSizeCm) || other.cellSizeCm == cellSizeCm)&&const DeepCollectionEquality().equals(other._shapeMask, _shapeMask));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,id,userId,name,cols,rows,cellSizeCm,const DeepCollectionEquality().hash(_shapeMask));
+
+@override
+String toString() {
+  return 'Field(id: $id, userId: $userId, name: $name, cols: $cols, rows: $rows, cellSizeCm: $cellSizeCm, shapeMask: $shapeMask)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$FieldCopyWith<$Res> implements $FieldCopyWith<$Res> {
+  factory _$FieldCopyWith(_Field value, $Res Function(_Field) _then) = __$FieldCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String userId, String name, int cols, int rows, int cellSizeCm, List<int> shapeMask
+});
+
+
+
+
+}
+/// @nodoc
+class __$FieldCopyWithImpl<$Res>
+    implements _$FieldCopyWith<$Res> {
+  __$FieldCopyWithImpl(this._self, this._then);
+
+  final _Field _self;
+  final $Res Function(_Field) _then;
+
+/// Create a copy of Field
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? userId = null,Object? name = null,Object? cols = null,Object? rows = null,Object? cellSizeCm = null,Object? shapeMask = null,}) {
+  return _then(_Field(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,userId: null == userId ? _self.userId : userId // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,cols: null == cols ? _self.cols : cols // ignore: cast_nullable_to_non_nullable
+as int,rows: null == rows ? _self.rows : rows // ignore: cast_nullable_to_non_nullable
+as int,cellSizeCm: null == cellSizeCm ? _self.cellSizeCm : cellSizeCm // ignore: cast_nullable_to_non_nullable
+as int,shapeMask: null == shapeMask ? _self._shapeMask : shapeMask // ignore: cast_nullable_to_non_nullable
+as List<int>,
+  ));
+}
+
+
+}
+
+// dart format on

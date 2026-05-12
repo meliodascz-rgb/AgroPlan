@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 extension ColorX on Color {
-  Color withTint(double opacity) => withOpacity(opacity);
+  Color withTint(double opacity) => withValues(alpha: opacity);
 }
 
 extension IterableX<T> on Iterable<T> {

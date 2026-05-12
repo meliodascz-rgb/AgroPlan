@@ -6,7 +6,7 @@ part 'relationship.g.dart';
 enum RelationshipType { symbiosis, competition, support, neutral }
 
 @freezed
-class Relationship with _$Relationship {
+abstract class Relationship with _$Relationship {
   const factory Relationship({
     required String speciesAId,
     required String speciesBId,

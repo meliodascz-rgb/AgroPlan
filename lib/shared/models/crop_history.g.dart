@@ -6,18 +6,17 @@ part of 'crop_history.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CropHistoryImpl _$$CropHistoryImplFromJson(Map<String, dynamic> json) =>
-    _$CropHistoryImpl(
-      id: json['id'] as String,
-      fieldId: json['fieldId'] as String,
-      cellIndex: (json['cellIndex'] as num).toInt(),
-      plantId: json['plantId'] as String,
-      year: (json['year'] as num).toInt(),
-      diseaseLogged: json['diseaseLogged'] as bool? ?? false,
-      diseaseNote: json['diseaseNote'] as String?,
-    );
+_CropHistory _$CropHistoryFromJson(Map<String, dynamic> json) => _CropHistory(
+  id: json['id'] as String,
+  fieldId: json['fieldId'] as String,
+  cellIndex: (json['cellIndex'] as num).toInt(),
+  plantId: json['plantId'] as String,
+  year: (json['year'] as num).toInt(),
+  diseaseLogged: json['diseaseLogged'] as bool? ?? false,
+  diseaseNote: json['diseaseNote'] as String?,
+);
 
-Map<String, dynamic> _$$CropHistoryImplToJson(_$CropHistoryImpl instance) =>
+Map<String, dynamic> _$CropHistoryToJson(_CropHistory instance) =>
     <String, dynamic>{
       'id': instance.id,
       'fieldId': instance.fieldId,

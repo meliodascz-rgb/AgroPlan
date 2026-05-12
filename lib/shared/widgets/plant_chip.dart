@@ -21,7 +21,7 @@ class PlantChip extends StatelessWidget {
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: color.withOpacity(0.18),
+        color: color.withValues(alpha: 0.18),
         shape: BoxShape.circle,
         border: showRing ? Border.all(color: color, width: 2) : null,
       ),

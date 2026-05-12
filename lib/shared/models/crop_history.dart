@@ -4,7 +4,7 @@ part 'crop_history.freezed.dart';
 part 'crop_history.g.dart';
 
 @freezed
-class CropHistory with _$CropHistory {
+abstract class CropHistory with _$CropHistory {
   const factory CropHistory({
     required String id,
     required String fieldId,

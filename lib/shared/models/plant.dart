@@ -5,7 +5,7 @@ part 'plant.freezed.dart';
 part 'plant.g.dart';
 
 @freezed
-class Plant with _$Plant {
+abstract class Plant with _$Plant {
   const Plant._(); // required for custom getters with freezed
 
   const factory Plant({

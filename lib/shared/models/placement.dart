@@ -6,7 +6,7 @@ part 'placement.g.dart';
 enum Season { spring, autumn }
 
 @freezed
-class Placement with _$Placement {
+abstract class Placement with _$Placement {
   const factory Placement({
     required String id,
     required String fieldId,

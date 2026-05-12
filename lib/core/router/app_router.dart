@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -21,19 +20,19 @@ GoRouter appRouter(Ref ref) {
     routes: [
       GoRoute(
         path: AppRoutes.splash,
-        builder: (_, __) => const SplashScreen(),
+        builder: (_, _) => const SplashScreen(),
       ),
       GoRoute(
         path: AppRoutes.onboarding,
-        builder: (_, __) => const WalkthroughScreen(),
+        builder: (_, _) => const WalkthroughScreen(),
       ),
       GoRoute(
         path: AppRoutes.login,
-        builder: (_, __) => const LoginScreen(),
+        builder: (_, _) => const LoginScreen(),
       ),
       GoRoute(
         path: AppRoutes.dashboard,
-        builder: (_, __) => const DashboardScreen(),
+        builder: (_, _) => const DashboardScreen(),
       ),
       GoRoute(
         path: AppRoutes.fieldEditor,
@@ -53,7 +52,7 @@ GoRouter appRouter(Ref ref) {
       ),
       GoRoute(
         path: AppRoutes.catalog,
-        builder: (_, __) => const CatalogScreen(),
+        builder: (_, _) => const CatalogScreen(),
         routes: [
           GoRoute(
             path: ':plantId',
@@ -66,7 +65,7 @@ GoRouter appRouter(Ref ref) {
       ),
       GoRoute(
         path: AppRoutes.profile,
-        builder: (_, __) => const ProfileScreen(),
+        builder: (_, _) => const ProfileScreen(),
       ),
     ],
   );

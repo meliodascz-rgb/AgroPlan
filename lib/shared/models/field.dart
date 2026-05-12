@@ -4,7 +4,7 @@ part 'field.freezed.dart';
 part 'field.g.dart';
 
 @freezed
-class Field with _$Field {
+abstract class Field with _$Field {
   const factory Field({
     required String id,
     required String userId,

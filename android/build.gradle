@@ -13,6 +13,34 @@ subprojects {
     project.evaluationDependsOn(":app")
 }
 
+// app_links (and similar packages) read flutter.compileSdkVersion at configuration
+// time. The real FlutterExtension is only registered on :app by the Flutter Gradle
+// Plugin. For every other subproject, we pre-populate ext.flutter with the same
+// values so Groovy property lookup finds a valid object instead of throwing.
+// On :app itself, the real FlutterExtension (a registered Gradle extension) takes
+// priority over ext properties, so this stub is silently ignored there.
+subprojects {
+    ext.flutter = [
+        compileSdkVersion: 35,
+        minSdkVersion    : 21,
+        targetSdkVersion : 35,
+        ndkVersion       : "27.0.12077973"
+    ]
+}
+
+// Java 8 + SDK 35 causes jlink transform failures. Force Java 11 on all library
+// subprojects. plugins.withId fires at plugin-apply time so it's safe here.
+subprojects {
+    plugins.withId('com.android.library') {
+        android {
+            compileOptions {
+                sourceCompatibility = JavaVersion.VERSION_11
+                targetCompatibility = JavaVersion.VERSION_11
+            }
+        }
+    }
+}
+
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }

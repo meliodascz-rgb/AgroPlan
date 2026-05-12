@@ -6,21 +6,44 @@ part of 'fields_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$fieldsHash() => r'c1a3016dae981dab914c56ffd730d3d35b33b6a8';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [fields].
 @ProviderFor(fields)
-final fieldsProvider = AutoDisposeFutureProvider<List<Field>>.internal(
-  fields,
-  name: r'fieldsProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$fieldsHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final fieldsProvider = FieldsProvider._();
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-typedef FieldsRef = AutoDisposeFutureProviderRef<List<Field>>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class FieldsProvider
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Field>>,
+          List<Field>,
+          FutureOr<List<Field>>
+        >
+    with $FutureModifier<List<Field>>, $FutureProvider<List<Field>> {
+  FieldsProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'fieldsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$fieldsHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<List<Field>> $createElement(
+    $ProviderPointer pointer,
+  ) => $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<List<Field>> create(Ref ref) {
+    return fields(ref);
+  }
+}
+
+String _$fieldsHash() => r'c1a3016dae981dab914c56ffd730d3d35b33b6a8';
