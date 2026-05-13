@@ -8,13 +8,13 @@ part of 'field.dart';
 
 _Field _$FieldFromJson(Map<String, dynamic> json) => _Field(
   id: json['id'] as String,
-  userId: json['userId'] as String,
+  userId: json['user_id'] as String,
   name: json['name'] as String,
   cols: (json['cols'] as num).toInt(),
   rows: (json['rows'] as num).toInt(),
-  cellSizeCm: (json['cellSizeCm'] as num).toInt(),
+  cellSizeCm: (json['cell_size_cm'] as num).toInt(),
   shapeMask:
-      (json['shapeMask'] as List<dynamic>?)
+      (json['shape_mask'] as List<dynamic>?)
           ?.map((e) => (e as num).toInt())
           .toList() ??
       const [],
@@ -22,10 +22,10 @@ _Field _$FieldFromJson(Map<String, dynamic> json) => _Field(
 
 Map<String, dynamic> _$FieldToJson(_Field instance) => <String, dynamic>{
   'id': instance.id,
-  'userId': instance.userId,
+  'user_id': instance.userId,
   'name': instance.name,
   'cols': instance.cols,
   'rows': instance.rows,
-  'cellSizeCm': instance.cellSizeCm,
-  'shapeMask': instance.shapeMask,
+  'cell_size_cm': instance.cellSizeCm,
+  'shape_mask': instance.shapeMask,
 };

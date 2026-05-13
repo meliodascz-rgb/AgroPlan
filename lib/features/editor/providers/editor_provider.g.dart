@@ -13,7 +13,7 @@ part of 'editor_provider.dart';
 final editorProvider = EditorNotifierFamily._();
 
 final class EditorNotifierProvider
-    extends $NotifierProvider<EditorNotifier, EditorState> {
+    extends $AsyncNotifierProvider<EditorNotifier, EditorState> {
   EditorNotifierProvider._({
     required EditorNotifierFamily super.from,
     required String super.argument,
@@ -39,14 +39,6 @@ final class EditorNotifierProvider
   @override
   EditorNotifier create() => EditorNotifier();
 
-  /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(EditorState value) {
-    return $ProviderOverride(
-      origin: this,
-      providerOverride: $SyncValueProvider<EditorState>(value),
-    );
-  }
-
   @override
   bool operator ==(Object other) {
     return other is EditorNotifierProvider && other.argument == argument;
@@ -58,15 +50,15 @@ final class EditorNotifierProvider
   }
 }
 
-String _$editorNotifierHash() => r'23d0c34a701082580e92e8b451eb018046e39c41';
+String _$editorNotifierHash() => r'ded9726e7d94b6a75c22ea471dc198373dcf2726';
 
 final class EditorNotifierFamily extends $Family
     with
         $ClassFamilyOverride<
           EditorNotifier,
+          AsyncValue<EditorState>,
           EditorState,
-          EditorState,
-          EditorState,
+          FutureOr<EditorState>,
           String
         > {
   EditorNotifierFamily._()
@@ -85,20 +77,20 @@ final class EditorNotifierFamily extends $Family
   String toString() => r'editorProvider';
 }
 
-abstract class _$EditorNotifier extends $Notifier<EditorState> {
+abstract class _$EditorNotifier extends $AsyncNotifier<EditorState> {
   late final _$args = ref.$arg as String;
   String get fieldId => _$args;
 
-  EditorState build(String fieldId);
+  FutureOr<EditorState> build(String fieldId);
   @$mustCallSuper
   @override
   void runBuild() {
-    final ref = this.ref as $Ref<EditorState, EditorState>;
+    final ref = this.ref as $Ref<AsyncValue<EditorState>, EditorState>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<EditorState, EditorState>,
-              EditorState,
+              AnyNotifier<AsyncValue<EditorState>, EditorState>,
+              AsyncValue<EditorState>,
               Object?,
               Object?
             >;

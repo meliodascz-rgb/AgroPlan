@@ -8,9 +8,9 @@ part of 'placement.dart';
 
 _Placement _$PlacementFromJson(Map<String, dynamic> json) => _Placement(
   id: json['id'] as String,
-  fieldId: json['fieldId'] as String,
-  cellIndex: (json['cellIndex'] as num).toInt(),
-  plantId: json['plantId'] as String,
+  fieldId: json['field_id'] as String,
+  cellIndex: (json['cell_index'] as num).toInt(),
+  speciesId: json['species_id'] as String,
   year: (json['year'] as num).toInt(),
   season: $enumDecode(_$SeasonEnumMap, json['season']),
 );
@@ -18,9 +18,9 @@ _Placement _$PlacementFromJson(Map<String, dynamic> json) => _Placement(
 Map<String, dynamic> _$PlacementToJson(_Placement instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'fieldId': instance.fieldId,
-      'cellIndex': instance.cellIndex,
-      'plantId': instance.plantId,
+      'field_id': instance.fieldId,
+      'cell_index': instance.cellIndex,
+      'species_id': instance.speciesId,
       'year': instance.year,
       'season': _$SeasonEnumMap[instance.season]!,
     };

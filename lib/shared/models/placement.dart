@@ -11,7 +11,7 @@ abstract class Placement with _$Placement {
     required String id,
     required String fieldId,
     required int cellIndex,
-    required String plantId,
+    required String speciesId,
     required int year,
     required Season season,
   }) = _Placement;

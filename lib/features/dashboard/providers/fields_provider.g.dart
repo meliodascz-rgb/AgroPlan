@@ -8,9 +8,16 @@ part of 'fields_provider.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
+/// Network-first with Drift cache.
+/// On success: syncs Supabase → Drift, then returns Drift rows.
+/// On network error: returns whatever Drift has cached (offline support).
 
 @ProviderFor(fields)
 final fieldsProvider = FieldsProvider._();
+
+/// Network-first with Drift cache.
+/// On success: syncs Supabase → Drift, then returns Drift rows.
+/// On network error: returns whatever Drift has cached (offline support).
 
 final class FieldsProvider
     extends
@@ -20,6 +27,9 @@ final class FieldsProvider
           FutureOr<List<Field>>
         >
     with $FutureModifier<List<Field>>, $FutureProvider<List<Field>> {
+  /// Network-first with Drift cache.
+  /// On success: syncs Supabase → Drift, then returns Drift rows.
+  /// On network error: returns whatever Drift has cached (offline support).
   FieldsProvider._()
     : super(
         from: null,
@@ -46,4 +56,4 @@ final class FieldsProvider
   }
 }
 
-String _$fieldsHash() => r'c1a3016dae981dab914c56ffd730d3d35b33b6a8';
+String _$fieldsHash() => r'b0e410bd0bd8c9c4aaf944cdb446cb9cadb66ca4';

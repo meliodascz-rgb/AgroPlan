@@ -8,9 +8,16 @@ part of 'heatmap_provider.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
+/// Returns a cell-index → HeatmapValue map for the given field and selected
+/// plant. Computed locally from catalog relationship data — no network call.
+/// Returns an empty map while the catalog is loading or if no plant is selected.
 
 @ProviderFor(heatmap)
 final heatmapProvider = HeatmapFamily._();
+
+/// Returns a cell-index → HeatmapValue map for the given field and selected
+/// plant. Computed locally from catalog relationship data — no network call.
+/// Returns an empty map while the catalog is loading or if no plant is selected.
 
 final class HeatmapProvider
     extends
@@ -20,6 +27,9 @@ final class HeatmapProvider
           Map<int, HeatmapValue>
         >
     with $Provider<Map<int, HeatmapValue>> {
+  /// Returns a cell-index → HeatmapValue map for the given field and selected
+  /// plant. Computed locally from catalog relationship data — no network call.
+  /// Returns an empty map while the catalog is loading or if no plant is selected.
   HeatmapProvider._({
     required HeatmapFamily super.from,
     required (String, String) super.argument,
@@ -72,7 +82,11 @@ final class HeatmapProvider
   }
 }
 
-String _$heatmapHash() => r'd68952c509ec4dbc11f898a6acef08bdc8457e4a';
+String _$heatmapHash() => r'158d5afde8d149f5e49967d0094dd76f9275363e';
+
+/// Returns a cell-index → HeatmapValue map for the given field and selected
+/// plant. Computed locally from catalog relationship data — no network call.
+/// Returns an empty map while the catalog is loading or if no plant is selected.
 
 final class HeatmapFamily extends $Family
     with $FunctionalFamilyOverride<Map<int, HeatmapValue>, (String, String)> {
@@ -84,6 +98,10 @@ final class HeatmapFamily extends $Family
         $allTransitiveDependencies: null,
         isAutoDispose: true,
       );
+
+  /// Returns a cell-index → HeatmapValue map for the given field and selected
+  /// plant. Computed locally from catalog relationship data — no network call.
+  /// Returns an empty map while the catalog is loading or if no plant is selected.
 
   HeatmapProvider call(String fieldId, String activePlantId) =>
       HeatmapProvider._(argument: (fieldId, activePlantId), from: this);

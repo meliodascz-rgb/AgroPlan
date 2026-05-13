@@ -9,7 +9,7 @@ abstract class CropHistory with _$CropHistory {
     required String id,
     required String fieldId,
     required int cellIndex,
-    required String plantId,
+    required String speciesId,
     required int year,
     @Default(false) bool diseaseLogged,
     String? diseaseNote,

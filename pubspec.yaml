@@ -26,12 +26,15 @@ dependencies:
 
   # Local SQLite offline cache (like Room)
   drift: ^2.18.0
-  sqlite3_flutter_libs: ^0.6.0+eol
+  sqlite3_flutter_libs: ^0.5.0
   path_provider: ^2.1.3
   path: ^1.9.0
 
   # Lightweight key-value store for flags (onboarding seen, theme pref)
   shared_preferences: ^2.3.1
+
+  # Google Sign-In (native account picker via Play Services)
+  google_sign_in: ^6.2.2
 
   # Images from CDN
   cached_network_image: ^3.3.1

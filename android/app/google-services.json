@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "62857319871",
+    "project_id": "agroplan-496122",
+    "storage_bucket": "agroplan-496122.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62857319871:android:5b58ad430e0646f358bd0a",
+        "android_client_info": {
+          "package_name": "com.agroplan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62857319871-lcgkkil0vr16vvuaspn9kqt1iqb0hh5i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agroplan",
+            "certificate_hash": "386277e8ae08c4ca6bf2b148f671bcba7d931fac"
+          }
+        },
+        {
+          "client_id": "62857319871-7ulesj4434nrlodln0qr5v8pub7ko34m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACvHuL0MsRyKm4XbuWhtNA0B3kQ90BDqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62857319871-7ulesj4434nrlodln0qr5v8pub7ko34m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

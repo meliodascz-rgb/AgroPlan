@@ -14,10 +14,10 @@ abstract class Plant with _$Plant {
     required String nameLatin,
     required String family,
     required String letter,
-    required String chipColorHex, // e.g. '#7DB57E' — matches PLANTS map in screens-shared.jsx
-    required int sunNeeds,        // 1–3
-    required int waterNeeds,      // 1–3
-    required int spaceNeeds,      // 1–3
+    required String chipColorHex,
+    required int sunNeeds,
+    required int waterNeeds,
+    required int spaceNeeds,
     @Default([]) List<String> goodNeighborIds,
     @Default([]) List<String> badNeighborIds,
     @Default([]) List<String> tags,

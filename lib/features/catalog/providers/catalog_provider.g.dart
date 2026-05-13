@@ -46,7 +46,7 @@ final class CatalogProvider
   }
 }
 
-String _$catalogHash() => r'70e8bbc400e9852038d9118839e86bc61e13a9b7';
+String _$catalogHash() => r'9f13a264280b2ccdc3c0695fe0a9a85e904a5990';
 
 @ProviderFor(CatalogFilter)
 final catalogFilterProvider = CatalogFilterProvider._();

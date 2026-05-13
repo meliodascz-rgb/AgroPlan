@@ -3,13 +3,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 part 'onboarding_provider.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 class OnboardingNotifier extends _$OnboardingNotifier {
   static const _key = 'onboarding_done';
 
   @override
   Future<bool> build() async {
     final prefs = await SharedPreferences.getInstance();
+    if (!ref.mounted) return false;
     return prefs.getBool(_key) ?? false;
   }
 

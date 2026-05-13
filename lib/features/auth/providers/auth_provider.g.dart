@@ -82,3 +82,36 @@ final class CurrentUserProvider extends $FunctionalProvider<User?, User?, User?>
 }
 
 String _$currentUserHash() => r'06a94a346f4db9f4da4f1a3d1c58e63a7c7110d9';
+
+@ProviderFor(signInWithGoogle)
+final signInWithGoogleProvider = SignInWithGoogleProvider._();
+
+final class SignInWithGoogleProvider
+    extends $FunctionalProvider<AsyncValue<void>, void, FutureOr<void>>
+    with $FutureModifier<void>, $FutureProvider<void> {
+  SignInWithGoogleProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'signInWithGoogleProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$signInWithGoogleHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<void> $createElement($ProviderPointer pointer) =>
+      $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<void> create(Ref ref) {
+    return signInWithGoogle(ref);
+  }
+}
+
+String _$signInWithGoogleHash() => r'60d54b242237f6220a17368f27503a8757fb42a3';

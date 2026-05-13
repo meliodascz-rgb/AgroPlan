@@ -9,43 +9,43 @@ part of 'plant.dart';
 _Plant _$PlantFromJson(Map<String, dynamic> json) => _Plant(
   id: json['id'] as String,
   name: json['name'] as String,
-  nameLatin: json['nameLatin'] as String,
+  nameLatin: json['name_latin'] as String,
   family: json['family'] as String,
   letter: json['letter'] as String,
-  chipColorHex: json['chipColorHex'] as String,
-  sunNeeds: (json['sunNeeds'] as num).toInt(),
-  waterNeeds: (json['waterNeeds'] as num).toInt(),
-  spaceNeeds: (json['spaceNeeds'] as num).toInt(),
+  chipColorHex: json['chip_color_hex'] as String,
+  sunNeeds: (json['sun_needs'] as num).toInt(),
+  waterNeeds: (json['water_needs'] as num).toInt(),
+  spaceNeeds: (json['space_needs'] as num).toInt(),
   goodNeighborIds:
-      (json['goodNeighborIds'] as List<dynamic>?)
+      (json['good_neighbor_ids'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList() ??
       const [],
   badNeighborIds:
-      (json['badNeighborIds'] as List<dynamic>?)
+      (json['bad_neighbor_ids'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList() ??
       const [],
   tags:
       (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
       const [],
-  rotationBefore: json['rotationBefore'] as String?,
-  rotationAfter: json['rotationAfter'] as String?,
+  rotationBefore: json['rotation_before'] as String?,
+  rotationAfter: json['rotation_after'] as String?,
 );
 
 Map<String, dynamic> _$PlantToJson(_Plant instance) => <String, dynamic>{
   'id': instance.id,
   'name': instance.name,
-  'nameLatin': instance.nameLatin,
+  'name_latin': instance.nameLatin,
   'family': instance.family,
   'letter': instance.letter,
-  'chipColorHex': instance.chipColorHex,
-  'sunNeeds': instance.sunNeeds,
-  'waterNeeds': instance.waterNeeds,
-  'spaceNeeds': instance.spaceNeeds,
-  'goodNeighborIds': instance.goodNeighborIds,
-  'badNeighborIds': instance.badNeighborIds,
+  'chip_color_hex': instance.chipColorHex,
+  'sun_needs': instance.sunNeeds,
+  'water_needs': instance.waterNeeds,
+  'space_needs': instance.spaceNeeds,
+  'good_neighbor_ids': instance.goodNeighborIds,
+  'bad_neighbor_ids': instance.badNeighborIds,
   'tags': instance.tags,
-  'rotationBefore': instance.rotationBefore,
-  'rotationAfter': instance.rotationAfter,
+  'rotation_before': instance.rotationBefore,
+  'rotation_after': instance.rotationAfter,
 };

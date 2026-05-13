@@ -15,11 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Plant {
 
- String get id; String get name; String get nameLatin; String get family; String get letter; String get chipColorHex;// e.g. '#7DB57E' — matches PLANTS map in screens-shared.jsx
- int get sunNeeds;// 1–3
- int get waterNeeds;// 1–3
- int get spaceNeeds;// 1–3
- List<String> get goodNeighborIds; List<String> get badNeighborIds; List<String> get tags; String? get rotationBefore; String? get rotationAfter;
+ String get id; String get name; String get nameLatin; String get family; String get letter; String get chipColorHex; int get sunNeeds; int get waterNeeds; int get spaceNeeds; List<String> get goodNeighborIds; List<String> get badNeighborIds; List<String> get tags; String? get rotationBefore; String? get rotationAfter;
 /// Create a copy of Plant
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -235,15 +231,10 @@ class _Plant extends Plant {
 @override final  String family;
 @override final  String letter;
 @override final  String chipColorHex;
-// e.g. '#7DB57E' — matches PLANTS map in screens-shared.jsx
 @override final  int sunNeeds;
-// 1–3
 @override final  int waterNeeds;
-// 1–3
 @override final  int spaceNeeds;
-// 1–3
  final  List<String> _goodNeighborIds;
-// 1–3
 @override@JsonKey() List<String> get goodNeighborIds {
   if (_goodNeighborIds is EqualUnmodifiableListView) return _goodNeighborIds;
   // ignore: implicit_dynamic_type
